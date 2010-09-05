@@ -1,0 +1,20 @@
+celt: CELT (The CELT ultra-low delay audio codec)
+celt:
+celt: CELT stands for "Constrained Energy Lapped Transform". It applies some
+celt: of the CELP principles, but does everything in the frequency domain,
+celt: which removes some of the limitations of CELP.  CELT is suitable for
+celt: both speech and music and currently features:
+celt:   * Ultra-low latency (typically from 3 to 9 ms);
+celt:   * Full audio bandwidth (>=20kHz; sample rates from 32 kHz to 96 kHz);
+celt:   * Support for both speech and music;
+celt:   * A quality/bitrate trade-off competitive with widely used high
+celt:     delay codecs;
+celt:   * Stereo support;
+celt:   * Packet loss concealment;
+celt:   * Constant bit-rates from 32 kbps to 128 kbps and above;
+celt:   * A fixed-point version of the encoder and decoder.
+celt: The CELT codec is meant to bridge the gap between Vorbis and Speex for
+celt: applications where both high quality audio and low delay are desired.
+celt: CELT is still experimental.
+celt:
+celt: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
