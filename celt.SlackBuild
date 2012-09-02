@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: celt.SlackBuild,v 1.4 2012/09/02 20:48:19 gsotirov Exp $
+# $Id: celt.SlackBuild,v 1.5 2012/09/02 20:59:25 gsotirov Exp $
 #
 
 . ../../slack-package.conf
@@ -55,8 +55,8 @@ tar -xvf $CWD/$NAME-$VERSION.tar.?z* || exit 3
 cd $SRC fix_source
 
 # Configure
-CFLAGS="$SLKCFLAGS -O2" \
-CXXFLAGS="$SLKCFLAGS -O2" \
+CFLAGS=$SLKCFLAGS \
+CXXFLAGS=$SLKCFLAGS \
 ./configure --build=$ARCH-slackware-linux \
             --host=$ARCH-slackware-linux \
             --prefix=/usr \
