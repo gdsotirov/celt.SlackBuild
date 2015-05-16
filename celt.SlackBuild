@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for CELT
-# Copyright (C) 2010-2012 Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2010-2015 Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: celt.SlackBuild,v 1.5 2012/09/02 20:59:25 gsotirov Exp $
+# $Id: celt.SlackBuild,v 1.6 2015/05/16 17:52:50 gsotirov Exp $
 #
 
 . ../../slack-package.conf
