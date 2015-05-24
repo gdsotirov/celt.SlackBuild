@@ -1,0 +1,35 @@
+# Fix tandem test
+# See http://git.xiph.org/?p=celt.git;a=commitdiff;h=c5f999097f64eb090e1a353a57f80045ece7330a
+diff -urNad celt-0.11.3-orig/libcelt/celt.c celt-0.11.3/libcelt/celt.c
+--- celt-0.11.3-orig/libcelt/celt.c	2011-03-12 00:38:07.000000000 +0200
++++ celt-0.11.3/libcelt/celt.c	2015-05-24 12:03:20.000000000 +0300
+@@ -2692,7 +2692,7 @@
+    static const char *error_strings[8] = {
+       "success",
+       "invalid argument",
+-      "invalid mode",
++      "buffer too small",
+       "internal error",
+       "corrupted stream",
+       "request not implemented",
+diff -urNad celt-0.11.3-orig/tests/tandem-test.c celt-0.11.3/tests/tandem-test.c
+--- celt-0.11.3-orig/tests/tandem-test.c	2011-02-10 16:38:03.000000000 +0200
++++ celt-0.11.3/tests/tandem-test.c	2015-05-24 12:03:21.000000000 +0300
+@@ -112,7 +112,7 @@
+             }
+ 
+             ret = celt_decode(dec, data, ret, pcm, frame_size);
+-            if (ret != CELT_OK) {
++            if (ret < 0) {
+                 fprintf(stderr, "Error: celt_decode returned %s\n", celt_strerror(ret));
+             }
+         }
+@@ -137,7 +137,7 @@
+             }
+ 
+             ret = celt_decode(dec, data, ret, pcm, frame_size);
+-            if (ret != CELT_OK) {
++            if (ret < 0) {
+                 fprintf(stderr, "Error: at %d bytes_per_frame celt_decode returned %s\n",
+                         bytes_per_frame, celt_strerror(ret));
+                 exit(1);
