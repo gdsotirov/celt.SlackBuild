@@ -17,4 +17,4 @@ celt: The CELT codec is meant to bridge the gap between Vorbis and Speex for
 celt: applications where both high quality audio and low delay are desired.
 celt: CELT is still experimental.
 celt:
-celt: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+celt: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
